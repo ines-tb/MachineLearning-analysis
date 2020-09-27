@@ -25,7 +25,8 @@ df_loans.head()
 #%%
 # Define the features set.
 X = df_loans.copy()
-X = X.drop("bad", axis=1)
+#X = X.drop("bad", axis=1)
+X = X.drop(["bad","gender_male","gender_female","education_Bachelor","education_High School or Below", "education_Master or Above","education_college"], axis=1)
 X.head()
 
 # %%
